@@ -19,5 +19,5 @@ variable "key_name" {
 
 variable "domain_name" {
   description = "The domain name to configure DNS for"
-  default     = "www.share-portfolio.com"
+  default     = "www.steamednotes.com"
 }

@@ -52,7 +52,7 @@ resource "aws_instance" "webserver" {
 resource "aws_route53_record" "webserver" {
   zone_id = data.aws_route53_zone.webserver.zone_id  # Using your existing Route 53 hosted zone
 
-  name    = var.domain_name  # www.share-portfolio.com
+  name    = var.domain_name  # www.steamednotes.com
   type    = "A"
   ttl     = 300
   records = [aws_instance.webserver.public_ip]  # Pointing to EC2 instance's dynamic public IP
@@ -60,5 +60,5 @@ resource "aws_route53_record" "webserver" {
 
 # Route 53 Hosted Zone data (assumes you already have the zone created)
 data "aws_route53_zone" "webserver" {
-  name = "share-portfolio.com."  # Replace with your domain
+  name = "steamednotes.com."  # Replace with your domain
 }
