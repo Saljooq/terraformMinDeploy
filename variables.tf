@@ -21,3 +21,8 @@ variable "domain_name" {
   description = "The domain name to configure DNS for"
   default     = "www.steamednotes.com"
 }
+
+variable "hosted_zone_domain_entry" {
+  description = "domain for Hosted Zone data"
+  default = "steamednotes.com."
+}

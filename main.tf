@@ -60,5 +60,5 @@ resource "aws_route53_record" "webserver" {
 
 # Route 53 Hosted Zone data (assumes you already have the zone created)
 data "aws_route53_zone" "webserver" {
-  name = "steamednotes.com."  # Replace with your domain
+  name = var.hosted_zone_domain_entry  # Replace with your domain
 }
